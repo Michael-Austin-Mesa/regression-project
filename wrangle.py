@@ -37,8 +37,7 @@ def get_new_zillow_data():
     SELECT bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, yearbuilt, taxamount, fips, transactiondate, propertylandusetypeid
     FROM properties_2017 AS prop
     JOIN predictions_2017 AS pred ON prop.parcelid = pred.parcelid
-    WHERE transactiondate LIKE "2017%" AND propertylandusetypeid = "261" ;
-
+    WHERE propertylandusetypeid = "261"
     '''
     return pd.read_sql(sql, e.get_db_url("zillow"))
 
@@ -47,6 +46,7 @@ def handle_nulls(df):
     # We keep 99.41% of the data after dropping nulls
     # round(df.dropna().shape[0] / df.shape[0], 4) returned .9941
     df = df.dropna()
+    df = df.drop(columns=['transactiondate','propertylandusetypeid'])
     return df
 
 
