@@ -19,10 +19,16 @@ import wrangle as w
 
 
 def plot_variable_pairs(df, target_variable):
-    for n in range(0,(len(df.columns))):
-        sns.lmplot(x=df.columns[n], y=target_variable, data=df)
+    df_list = list(df)
+    #for n in range(0,(len(df))):
+    for i in df[1:]:
+        sns.lmplot(x=df[i], y=target_variable, data=df)
         plt.show()
-
+#for i in x_cols[1:]:
+ #   print(i)
+  #  plt.figure()
+   # plt.plot(y_cols,x_cols[i])
+    #plt.show()
 
 # In[3]:
 
