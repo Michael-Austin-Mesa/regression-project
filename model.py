@@ -11,7 +11,6 @@ import math
 import matplotlib.pyplot as plt
 
 import wrangle as w
-import explore as e
 import env
 
 from sklearn.model_selection import train_test_split
