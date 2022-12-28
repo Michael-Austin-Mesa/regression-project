@@ -58,7 +58,7 @@ y_test = test[['tax_value']]
 
 
 def get_baseline():
-#def get_baseline():
+''' This functions returns the baseline model predictions. '''
     y_train['tax_value_pred_mean']= y_train['tax_value'].mean()
     y_validate['tax_value_pred_mean']= y_validate['tax_value'].mean()
 
