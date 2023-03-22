@@ -80,3 +80,5 @@ My initial hypothesis is that drivers of tax value will likely be main features 
 
 
 - Create a model for each county that had properties with a transaction.
+
+- Tableau Workbook for Zillow.csv: https://public.tableau.com/app/profile/michael.mesa/viz/ZillowDataStory/Story1
